@@ -1,0 +1,5 @@
+@import 'base.css';
+
+.boxes {border:10px solid rgb(41, 163, 41); padding:2%;}
+.box {width:50px; height:50px; border:2px solid rgb(150, 45, 45); background-color: bisque; position: relative; margin-bottom:-2px;}
+.bts {margin-top:2rem; text-align:center;}

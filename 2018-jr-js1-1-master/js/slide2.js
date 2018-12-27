@@ -1,5 +1,6 @@
-var n = 1;
-var a = 1;
+var n = 1	;
+
+$(".banners > ul").append($(".banner").eq(0).clone());
 var end = $(".banner").length - 1;
 var interval = setInterval(ani, 2000);
 
@@ -13,8 +14,10 @@ $(".banner").each(function(i){
 
 function ani(){
 	$(".banners > ul").stop().animate({"left":(-n*100)+"%"}, 500, function(){
-		if(n == end) a = -1;
-		if(n == 0) a = 1;
-		n += a;
+		if(n == end) {
+			$(this).css({"left":0});
+			n = 1;
+		}
+		else n++;
 	});
 }
