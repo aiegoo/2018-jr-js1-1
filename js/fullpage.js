@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var log = console.log;		//console.log() 메서드를 log 변수에 넣는다
 var direction = null;			//direction 저장 변수 (- 휠을 위로 올림/+ 휠을 아래로 내림)
 var pos = [];							//각각의 페이지가 body로부터 떨어진 y 값
@@ -53,3 +54,23 @@ function pageAni() {
 		$("#navs > a").eq(now).addClass("w3-light-grey");
 	});
 }
+=======
+var log = console.log;
+var direction = null;
+var pos = [];
+var now = 0;
+$(window).on('mousewheel DOMMouseScroll', function(e){
+	e.preventDefault();
+	direction = e.originalEvent.deltaY;
+	$(".box").each(function(i){
+		pos[i] = $(this).offset().top;
+	});
+	
+	if(direction > 0 ) {
+		//$("html, body").stop().animate({"scrollTop":pos[2]+"px"}, 500);
+	}
+	else {
+		//$("html, body").stop().animate({"scrollTop":pos[1]+"px"}, 500);
+	}
+});
+>>>>>>> origin/master
