@@ -22,7 +22,7 @@ $(window).on('mousewheel DOMMouseScroll', function(e){
 	for(var i in pos) {
 		//log("e.pageY : " + e.pageY);
 		//log("pos["+i+"] : " + pos[i]);
-		if(e.pageY < pos[i]) { //현재 페이지를 찾은 공식 index-1이 현재 페이지이고 휠의 방향에 따라 다음 페이로 넘겨 줌.
+		if(e.pageY < pos[i]) { //현재 페이지를 찾은 공식 index -1이 현재 scroll 하는 페이지이고 휠의 방향에 따라 다음 페이로 넘겨 줌.
 			now = i - 1;
 			break;
 		}
